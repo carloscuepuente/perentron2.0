@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useGroupInfo } from "../../context/GroupInfoContext";
 import useAddTurno from "../../hooks/useAddTurno";
 import "./ScheduleInput.css";
 
@@ -7,8 +8,14 @@ function ScheduleInput({ id }) {
   const [clockIn, setClockIn] = useState("");
   const [clockOut, setClockOut] = useState("");
   const [realClockOut, setRealClockOut] = useState("");
+  const [groupInfo, setGroupInfo] = useGroupInfo();
 
   useAddTurno(id, name, clockIn, clockOut, realClockOut);
+
+  const handleDeleteClick = (id) => {
+    const filteredGroupInfo = groupInfo.filter((group) => group.id !== id);
+    setGroupInfo(filteredGroupInfo);
+  };
 
   return (
     <div>
@@ -49,6 +56,7 @@ function ScheduleInput({ id }) {
           required
         />
       </label>
+      <button onClick={() => handleDeleteClick(id)}>X</button>
     </div>
   );
 }

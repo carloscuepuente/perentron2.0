@@ -1,6 +1,8 @@
+import DateSelect from "../../components/DateSelect/DateSelect";
 import GroupInputGenerator from "../../components/GroupInputGenerator/GroupInputGenerator";
 import OverhourSelector from "../../components/OverhourSelector/OverhourSelector";
 import { useOverhourSelector } from "../../context/OverhourSelectorContext";
+
 function Home() {
   const [overtimeType] = useOverhourSelector();
   console.log(overtimeType);
@@ -8,6 +10,7 @@ function Home() {
   return (
     <>
       <h2>Soy la pagina de home</h2>
+      <DateSelect />
       <OverhourSelector />
       <GroupInputGenerator />
     </>
