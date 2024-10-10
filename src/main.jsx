@@ -7,6 +7,7 @@ import "./index.css";
 import { OverhourSelectorProvider } from "./context/OverhourSelectorContext.jsx";
 import { GroupInfoProvider } from "./context/GroupInfoContext.jsx";
 import { DateSelectProvider } from "./context/DateSelectContext.jsx";
+import { DutySelectProvider } from "./context/DutySelectContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,7 +15,9 @@ createRoot(document.getElementById("root")).render(
       <OverhourSelectorProvider>
         <GroupInfoProvider>
           <DateSelectProvider>
-            <App />
+            <DutySelectProvider>
+              <App />
+            </DutySelectProvider>
           </DateSelectProvider>
         </GroupInfoProvider>
       </OverhourSelectorProvider>
