@@ -10,6 +10,7 @@ import { DateSelectProvider } from "./context/DateSelectContext.jsx";
 import { DutySelectProvider } from "./context/DutySelectContext.jsx";
 import { OverhourDLCauseProvider } from "./context/OverhourDLCauseContext.jsx";
 import { OverhourAcInfoProvider } from "./context/OverhourAcInfoContext.jsx";
+import { OverhourShiftReliefProvider } from "./context/OverhourShiftReliefContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -20,7 +21,9 @@ createRoot(document.getElementById("root")).render(
             <DutySelectProvider>
               <OverhourDLCauseProvider>
                 <OverhourAcInfoProvider>
-                  <App />
+                  <OverhourShiftReliefProvider>
+                    <App />
+                  </OverhourShiftReliefProvider>
                 </OverhourAcInfoProvider>
               </OverhourDLCauseProvider>
             </DutySelectProvider>
