@@ -1,5 +1,6 @@
 import { useState } from "react";
-import useAddAcInfo from "../../hooks/useAddAcInfo";
+// import useAddAcInfo from "../../hooks/useAddAcInfo";
+import useAddJustificationInfo from "../../hooks/useAddJustificationInfo";
 
 function OverhourAcInfo() {
   const [fltNumber, setFltNumber] = useState("");
@@ -7,7 +8,8 @@ function OverhourAcInfo() {
   const [ata, setAta] = useState("");
   const [reg, setReg] = useState("");
 
-  useAddAcInfo(fltNumber, sta, ata, reg);
+  // useAddAcInfo({fltNumber, sta, ata, reg});
+  useAddJustificationInfo({ fltNumber, sta, ata, reg });
 
   return (
     <fieldset>

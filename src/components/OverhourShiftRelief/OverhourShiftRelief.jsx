@@ -1,12 +1,13 @@
 import { useState } from "react";
-import useAddReliefInfo from "../../hooks/useAddReliefInfo";
+// import useAddReliefInfo from "../../hooks/useAddReliefInfo";
+import useAddJustificationInfo from "../../hooks/useAddJustificationInfo";
 
 function OverhourShiftRelief() {
   const [positionRelief, setPosition] = useState("");
   const [nameRelief, setName] = useState("");
   const [causeRelief, setCause] = useState("");
 
-  useAddReliefInfo(positionRelief, nameRelief, causeRelief);
+  useAddJustificationInfo({ positionRelief, nameRelief, causeRelief });
 
   return (
     <fieldset>

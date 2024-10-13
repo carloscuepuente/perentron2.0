@@ -11,12 +11,14 @@ import { useOverhourDLCause } from "../../context/OverhourDLCauseContext";
 import { useOverhourSelector } from "../../context/OverhourSelectorContext";
 
 import { useOverhourJustification } from "../../context/OverhourJustificationContext";
+import OverhourShiftAbsence from "../../components/OverHourShiftAbsence/OverHourShiftAbsence";
+import OverhourServices from "../../components/OverhourServices/OverhourServices";
+import OverhourExceptional from "../../components/OverhourExceptional/OverhourExceptional";
 
 function Home() {
   const [overtimeType] = useOverhourSelector();
   const [duty] = useDutySelect();
   const [cause] = useOverhourDLCause();
-
   const [justificationInfo] = useOverhourJustification();
   console.log(overtimeType);
   console.log(duty);
@@ -34,6 +36,9 @@ function Home() {
       <OverhourDLCause />
       <OverhourAcInfo />
       <OverhourShiftRelief />
+      <OverhourShiftAbsence />
+      <OverhourServices />
+      <OverhourExceptional />
     </>
   );
 }
