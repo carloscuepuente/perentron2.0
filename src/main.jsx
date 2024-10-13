@@ -9,8 +9,7 @@ import { GroupInfoProvider } from "./context/GroupInfoContext.jsx";
 import { DateSelectProvider } from "./context/DateSelectContext.jsx";
 import { DutySelectProvider } from "./context/DutySelectContext.jsx";
 import { OverhourDLCauseProvider } from "./context/OverhourDLCauseContext.jsx";
-import { OverhourAcInfoProvider } from "./context/OverhourAcInfoContext.jsx";
-import { OverhourShiftReliefProvider } from "./context/OverhourShiftReliefContext.jsx";
+import { OverhourJustificationProvider } from "./context/OverhourJustificationContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,13 +18,12 @@ createRoot(document.getElementById("root")).render(
         <GroupInfoProvider>
           <DateSelectProvider>
             <DutySelectProvider>
-              <OverhourDLCauseProvider>
-                <OverhourAcInfoProvider>
-                  <OverhourShiftReliefProvider>
-                    <App />
-                  </OverhourShiftReliefProvider>
-                </OverhourAcInfoProvider>
-              </OverhourDLCauseProvider>
+              <OverhourJustificationProvider>
+                {/* si va todo bien borrar los 3 de abajo hasta app */}
+                <OverhourDLCauseProvider>
+                  <App />
+                </OverhourDLCauseProvider>
+              </OverhourJustificationProvider>
             </DutySelectProvider>
           </DateSelectProvider>
         </GroupInfoProvider>

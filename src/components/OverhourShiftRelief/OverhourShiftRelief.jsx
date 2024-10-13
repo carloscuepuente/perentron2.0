@@ -2,11 +2,11 @@ import { useState } from "react";
 import useAddReliefInfo from "../../hooks/useAddReliefInfo";
 
 function OverhourShiftRelief() {
-  const [position, setPosition] = useState("");
-  const [name, setName] = useState("");
-  const [cause, setCause] = useState("");
+  const [positionRelief, setPosition] = useState("");
+  const [nameRelief, setName] = useState("");
+  const [causeRelief, setCause] = useState("");
 
-  useAddReliefInfo(position, name, cause);
+  useAddReliefInfo(positionRelief, nameRelief, causeRelief);
 
   return (
     <fieldset>
@@ -15,7 +15,7 @@ function OverhourShiftRelief() {
         <label>
           Cargo:
           <input
-            value={position}
+            value={positionRelief}
             onChange={(event) => setPosition(event.target.value)}
             placeholder=""
             type="text"
@@ -26,7 +26,7 @@ function OverhourShiftRelief() {
         <label>
           Nombre:
           <input
-            value={name}
+            value={nameRelief}
             onChange={(event) => setName(event.target.value)}
             placeholder=""
             type="text"
@@ -37,7 +37,7 @@ function OverhourShiftRelief() {
         <label>
           Motivo del retraso:
           <input
-            value={cause}
+            value={causeRelief}
             onChange={(event) => setCause(event.target.value)}
             placeholder=""
             type="text"

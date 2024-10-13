@@ -1,17 +1,19 @@
 import { useEffect } from "react";
-import { useOverhourShiftRelief } from "../context/OverhourShiftReliefContext";
+// import { useOverhourShiftRelief } from "../context/OverhourShiftReliefContext";
+import { useOverhourJustification } from "../context/OverhourJustificationContext";
 
-const useAddReliefInfo = (position, name, cause) => {
-  const [reliefInfo, setReliefInfo] = useOverhourShiftRelief();
+const useAddReliefInfo = (positionRelief, nameRelief, causeRelief) => {
+  // const [reliefInfo, setReliefInfo] = useOverhourShiftRelief();
+  const [justificationInfo, setJustificationInfo] = useOverhourJustification();
 
   useEffect(() => {
-    setReliefInfo({
-      ...reliefInfo,
-      position: position,
-      name: name,
-      cause: cause,
+    setJustificationInfo({
+      ...justificationInfo,
+      positionRelief: positionRelief,
+      nameRelief: nameRelief,
+      causeRelief: causeRelief,
     });
-  }, [position, name, cause]);
+  }, [positionRelief, nameRelief, causeRelief]);
 };
 
 export default useAddReliefInfo;
