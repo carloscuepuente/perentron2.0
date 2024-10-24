@@ -1,13 +1,7 @@
 import { useEffect } from "react";
 import { useGroupInfo } from "../context/GroupInfoContext";
 
-const useAddTurno = (
-  id,
-  name,
-  turnoProgramadoIni,
-  turnoProgramadoFin,
-  turnoSalida
-) => {
+const useAddTurno = (id, name, clockIn, clockOut, realClockOut) => {
   const [groupInfo, setGroupInfo] = useGroupInfo();
 
   useEffect(() => {
@@ -16,14 +10,14 @@ const useAddTurno = (
         ? {
             ...group,
             name: name,
-            turnoProgramadoIni: turnoProgramadoIni,
-            turnoProgramadoFin: turnoProgramadoFin,
-            turnoSalida: turnoSalida,
+            clockIn: clockIn,
+            clockOut: clockOut,
+            realClockOut: realClockOut,
           }
         : group
     );
     setGroupInfo(updatedGroupInfo);
-  }, [id, name, turnoProgramadoIni, turnoProgramadoFin, turnoSalida]);
+  }, [id, name, clockIn, clockOut, realClockOut]);
 };
 
 export default useAddTurno;
