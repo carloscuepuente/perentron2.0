@@ -8,10 +8,9 @@ function OverhourShiftAbsence() {
 
   useAddJustificationInfo({ positionAbsence, nameAbsence, causeAbsence });
   return (
-    <fieldset>
-      <legend>Ausencia imprevista de trabajadores</legend>
+    <div className="form-group-multiple">
       <div>
-        <label>
+        <label className="form-control">
           Cargo persona ausente:
           <input
             value={positionAbsence}
@@ -22,7 +21,7 @@ function OverhourShiftAbsence() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Nombre:
           <input
             value={nameAbsence}
@@ -33,7 +32,7 @@ function OverhourShiftAbsence() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Motivo de la ausencia:
           <input
             value={causeAbsence}
@@ -43,7 +42,7 @@ function OverhourShiftAbsence() {
           />
         </label>
       </div>
-    </fieldset>
+    </div>
   );
 }
 

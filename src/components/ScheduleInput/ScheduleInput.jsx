@@ -21,45 +21,49 @@ function ScheduleInput({ id }) {
   };
 
   return (
-    <div>
-      <label>
-        Nombre del Empleado
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="Nombre"
-        />
-      </label>
+    <div className="form-group">
+      <div className="form-group-employee">
+        <label className="form-control">
+          Nombre del Empleado
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="text"
+            placeholder="Nombre"
+          />
+        </label>
 
-      <label>
-        Entrada Programada
-        <input
-          value={clockIn}
-          onChange={(e) => setClockIn(e.target.value)}
-          type="time"
-          required
-        />
-      </label>
-      <label>
-        Salida Programada
-        <input
-          value={clockOut}
-          onChange={(e) => setClockOut(e.target.value)}
-          type="time"
-          required
-        />
-      </label>
-      <label>
-        {overtimeType === "entrada" ? "Entrada Real" : "Salida Real"}
-        <input
-          value={realClockOut}
-          onChange={(e) => setRealClockOut(e.target.value)}
-          type="time"
-          required
-        />
-      </label>
-      <button onClick={() => handleDeleteClick(id)}>X</button>
+        <label className="form-control">
+          Entrada Programada
+          <input
+            value={clockIn}
+            onChange={(e) => setClockIn(e.target.value)}
+            type="time"
+            required
+          />
+        </label>
+        <label className="form-control">
+          Salida Programada
+          <input
+            value={clockOut}
+            onChange={(e) => setClockOut(e.target.value)}
+            type="time"
+            required
+          />
+        </label>
+        <label className="form-control">
+          {overtimeType === "entrada" ? "Entrada Real" : "Salida Real"}
+          <input
+            value={realClockOut}
+            onChange={(e) => setRealClockOut(e.target.value)}
+            type="time"
+            required
+          />
+        </label>
+        <button className="button" onClick={() => handleDeleteClick(id)}>
+          X
+        </button>
+      </div>
     </div>
   );
 }

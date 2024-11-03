@@ -12,9 +12,8 @@ function OverhourAcInfo() {
   useAddJustificationInfo({ fltNumber, sta, ata, reg });
 
   return (
-    <fieldset>
-      <legend>Impuntualidad de Aeronaves</legend>
-      <div>
+    <div className="form-group-multiple">
+      <div className="form-control">
         <label>
           Número de vuelo:
           <input
@@ -26,7 +25,7 @@ function OverhourAcInfo() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           STA/STD:
           <input
             value={sta}
@@ -37,7 +36,7 @@ function OverhourAcInfo() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           ATA/ATD:
           <input
             value={ata}
@@ -48,7 +47,7 @@ function OverhourAcInfo() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Matricula:
           <input
             value={reg}
@@ -58,7 +57,7 @@ function OverhourAcInfo() {
           />
         </label>
       </div>
-    </fieldset>
+    </div>
   );
 }
 

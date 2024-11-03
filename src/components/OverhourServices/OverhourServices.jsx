@@ -6,21 +6,17 @@ function OverhourServices() {
   useAddJustificationInfo({ services });
 
   return (
-    <fieldset>
-      <legend>Servicios o reparaciones urgentes</legend>
-
-      <div>
-        <label>
-          Motivo:
-          <input
-            placeholder=""
-            type="text"
-            value={services}
-            onChange={(event) => setServices(event.target.value)}
-          />
-        </label>
-      </div>
-    </fieldset>
+    <div className="form-group">
+      <label className="form-control">
+        Motivo:
+        <input
+          placeholder=""
+          type="text"
+          value={services}
+          onChange={(event) => setServices(event.target.value)}
+        />
+      </label>
+    </div>
   );
 }
 

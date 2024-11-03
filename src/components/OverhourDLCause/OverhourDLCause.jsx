@@ -1,4 +1,5 @@
 import { useOverhourDLCause } from "../../context/OverhourDLCauseContext";
+import "./OverhourDLCause.css";
 
 function OverhourDLCause() {
   const [cause, setCause] = useOverhourDLCause();
@@ -7,21 +8,18 @@ function OverhourDLCause() {
     setCause(event.target.value);
   };
   return (
-    <fieldset>
-      <legend>Explicación del motivo de la perentoria</legend>
-
-      <div>
-        <label>
-          Motivo:
-          <input
-            placeholder="Códigos Delay, etc"
-            type="text"
-            value={cause}
-            onChange={handleChange}
-          />
-        </label>
-      </div>
-    </fieldset>
+    <div className="form-group">
+      <label className="form-control">
+        Motivo:
+        <input
+          className="form-control"
+          placeholder="Códigos Delay, etc"
+          type="text"
+          value={cause}
+          onChange={handleChange}
+        />
+      </label>
+    </div>
   );
 }
 

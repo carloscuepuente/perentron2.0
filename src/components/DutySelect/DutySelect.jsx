@@ -8,13 +8,13 @@ function DutySelect() {
     console.log(event.target.value);
   };
   return (
-    <div>
-      <label>
+    <div className="form-group">
+      <label className="form-control">
         Selecciona al supervisor:
-        <select onChange={handleChange}>
+        <select className="form-control" onChange={handleChange}>
           {dutys.map((name) => {
             return (
-              <option value={name} key={name}>
+              <option className="form-control" value={name} key={name}>
                 {name}
               </option>
             );

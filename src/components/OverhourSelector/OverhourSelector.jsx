@@ -5,11 +5,9 @@ function OverhourSelector() {
   const [overtimeType, setOvertimeType] = useOverhourSelector();
 
   return (
-    <fieldset>
-      <legend>Selecciona el tipo de perentoria</legend>
-
+    <div className="radio-group">
       <div>
-        <label>
+        <label className="form-control">
           Salida Tardía
           <input
             type="radio"
@@ -21,7 +19,7 @@ function OverhourSelector() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Entrada Anticipada
           <input
             type="radio"
@@ -32,7 +30,7 @@ function OverhourSelector() {
           />
         </label>
       </div>
-    </fieldset>
+    </div>
   );
 }
 

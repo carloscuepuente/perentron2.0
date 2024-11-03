@@ -10,10 +10,9 @@ function OverhourShiftRelief() {
   useAddJustificationInfo({ positionRelief, nameRelief, causeRelief });
 
   return (
-    <fieldset>
-      <legend>Retraso en relevo de turno</legend>
+    <div className="form-group-multiple">
       <div>
-        <label>
+        <label className="form-control">
           Cargo:
           <input
             value={positionRelief}
@@ -24,7 +23,7 @@ function OverhourShiftRelief() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Nombre:
           <input
             value={nameRelief}
@@ -35,7 +34,7 @@ function OverhourShiftRelief() {
         </label>
       </div>
       <div>
-        <label>
+        <label className="form-control">
           Motivo del retraso:
           <input
             value={causeRelief}
@@ -45,7 +44,7 @@ function OverhourShiftRelief() {
           />
         </label>
       </div>
-    </fieldset>
+    </div>
   );
 }
 

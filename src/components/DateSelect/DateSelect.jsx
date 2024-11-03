@@ -7,10 +7,11 @@ function DateSelect() {
   const [date, setDate] = useDateSelect();
 
   return (
-    <div>
-      <label>
+    <div className="form-group">
+      <label className="form-control">
         Selecciona la fecha
         <input
+          className="form-control"
           type="date"
           name="date"
           value={date}

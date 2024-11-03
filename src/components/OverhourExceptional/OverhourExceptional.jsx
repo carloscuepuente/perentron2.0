@@ -6,21 +6,17 @@ function OverhourExceptional() {
   useAddJustificationInfo({ exceptional: exceptional });
 
   return (
-    <fieldset>
-      <legend>Otras circunstancias excepcionales</legend>
-
-      <div>
-        <label>
-          Motivo:
-          <input
-            placeholder=""
-            type="text"
-            value={exceptional}
-            onChange={(event) => setExceptional(event.target.value)}
-          />
-        </label>
-      </div>
-    </fieldset>
+    <div className="form-group">
+      <label className="form-control">
+        Motivo:
+        <input
+          placeholder=""
+          type="text"
+          value={exceptional}
+          onChange={(event) => setExceptional(event.target.value)}
+        />
+      </label>
+    </div>
   );
 }
 

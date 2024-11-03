@@ -11,13 +11,15 @@ function GroupInputGenerator() {
     setGroupInfo([...groupInfo, { id: uuidv4() }]);
   };
   return (
-    <div>
-      <button onClick={handleOnClick}>Agregar Empleado</button>
+    <>
+      <button className="button" onClick={handleOnClick}>
+        Agregar Empleado
+      </button>
 
       {groupInfo?.map((group) => {
         return <ScheduleInput id={group.id} key={group.id} />;
       })}
-    </div>
+    </>
   );
 }
 
