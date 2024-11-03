@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useGroupInfo } from "../../context/GroupInfoContext";
 import useAddTurno from "../../hooks/useAddTurno";
 import "./ScheduleInput.css";
+import { useOverhourSelector } from "../../context/OverhourSelectorContext";
 
 function ScheduleInput({ id }) {
   const [name, setName] = useState("");
@@ -9,6 +10,8 @@ function ScheduleInput({ id }) {
   const [clockOut, setClockOut] = useState("");
   const [realClockOut, setRealClockOut] = useState("");
   const [groupInfo, setGroupInfo] = useGroupInfo();
+
+  const [overtimeType] = useOverhourSelector();
 
   useAddTurno(id, name, clockIn, clockOut, realClockOut);
 
@@ -48,7 +51,7 @@ function ScheduleInput({ id }) {
         />
       </label>
       <label>
-        Salida Real
+        {overtimeType === "entrada" ? "Entrada Real" : "Salida Real"}
         <input
           value={realClockOut}
           onChange={(e) => setRealClockOut(e.target.value)}

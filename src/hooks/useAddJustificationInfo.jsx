@@ -4,6 +4,7 @@ import { useOverhourJustification } from "../context/OverhourJustificationContex
 const useAddJustificationInfo = (newInfo) => {
   const [, setJustificationInfo] = useOverhourJustification();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const memoNewInfo = useMemo(() => newInfo, [JSON.stringify(newInfo)]);
 
   useEffect(() => {
@@ -11,6 +12,7 @@ const useAddJustificationInfo = (newInfo) => {
       ...prevInfo,
       ...newInfo,
     }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [memoNewInfo]);
 };
 

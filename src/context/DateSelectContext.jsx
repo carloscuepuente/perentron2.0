@@ -4,6 +4,7 @@ import { createContext } from "react";
 
 export const DateSelect = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useDateSelect = () => useContext(DateSelect);
 
 export const DateSelectProvider = ({ children }) => {

@@ -3,6 +3,7 @@ import { createContext } from "react";
 
 export const OverhourSelector = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useOverhourSelector = () => useContext(OverhourSelector);
 
 export const OverhourSelectorProvider = ({ children }) => {
