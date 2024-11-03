@@ -5,7 +5,7 @@ import OverhourAcInfo from "../../components/OverhourAcInfo/OverhourAcInfo";
 import OverhourDLCause from "../../components/OverhourDLCause/OverhourDLCause";
 import OverhourSelector from "../../components/OverhourSelector/OverhourSelector";
 import OverhourShiftRelief from "../../components/OverhourShiftRelief/OverhourShiftRelief";
-import OverhourShiftAbsence from "../../components/OverHourShiftAbsence/OverHourShiftAbsence";
+import OverhourShiftAbsence from "../../components/OverhourShiftAbsence/OverhourShiftAbsence";
 import OverhourServices from "../../components/OverhourServices/OverhourServices";
 import OverhourExceptional from "../../components/OverhourExceptional/OverhourExceptional";
 import DownloadButton from "../../components/DownloadButton/DownloadButton";
